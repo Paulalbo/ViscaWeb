@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AASA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAAG",
+    "sources": [
+        "main.sass",
+        "style/__color.sass",
+        "style/__fonts.sass",
+        "style/__variables.sass",
+        "style/__content.sass",
+        "style/__nav.sass",
+        "style/__card.sass",
+        "style/__footer.sass"
+    ],
+    "names": [],
+    "file": "main.css"
+}
