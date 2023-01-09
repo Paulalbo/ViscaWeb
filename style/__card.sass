@@ -1,0 +1,34 @@
+.card
+    box-shadow: 0px 3px 12px 0px #00000033
+    border-radius: 8px
+    background: $color-white
+    margin: 8px 16px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-container 
+        &--sorted
+            .card__count
+                opacity: 0
+    &__count 
+
+    &__img 
+
+    &__info 
+    
+    &__button 
+        background-color: $color-orangey-red
+        color: $color-white
+        min-width: 39px
+        min-height: 56px
+        position: relative
+        border-radius: 0 8px 8px 0
+        &::after
+            content: ">"
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+        &-text 
+            display: none

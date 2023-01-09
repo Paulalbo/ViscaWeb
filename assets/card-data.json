@@ -1,0 +1,94 @@
+[
+    {
+        "company": "Sports interaction",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "bonus",
+            "amount": 200
+        }
+    },
+    {
+        "company": "Power Play Sports",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "free-bet",
+            "amount": 200
+        }
+    }
+    ,
+    {
+        "company": "betway",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "bonus",
+            "amount": 200
+        }
+    }
+    ,
+    {
+        "company": "Spin Sports",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "free-bet",
+            "amount": 200
+        }
+    },
+    {
+        "company": "bodog",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "bonus",
+            "amount": 200
+        }
+    },
+    {
+        "company": "bet365",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "exclusive",
+            "amount": 200
+        }
+    },
+    {
+        "company": "888sport",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "exclusive",
+            "amount": 200
+        }
+    },
+    {
+        "company": "10BET For the bettor.",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "exclusive",
+            "amount": 200
+        }
+    },
+    {
+        "company": "LeoVegas",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "exclusive",
+            "amount": 200
+        }
+    },
+    {
+        "company": "WiliamHill",
+        "logo": "logo.png",
+        "rating": 5,
+        "bonustext": {
+            "type": "exclusive",
+            "amount": 200
+        }
+    }
+]
