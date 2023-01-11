@@ -1,102 +1,107 @@
-[
-    {
-        "company": "Sports interaction",
-        "logo": "sports-interaction.jpg",
-        "rating": 5,
-        "bonustext": {
-            "type": "bonus",
-            "text": "Up to ",
-            "amount": 200
-        }
+{
+    "config": {
+        "limit": 5
     },
-    {
-        "company": "Power Play Sports",
-        "logo": "powerplay.png",
-        "rating": 4,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
+    "data": [
+        {
+            "company": "Sports interaction",
+            "logo": "sports-interaction.jpg",
+            "rating": 5,
+            "bonustext": {
+                "type": "bonus",
+                "text": "Up to ",
+                "amount": 200
+            }
+        },
+        {
+            "company": "Power Play Sports",
+            "logo": "powerplay.png",
+            "rating": 4,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "betway",
+            "logo": "betway.png",
+            "rating": 3,
+            "bonustext": {
+                "type": "bonus",
+                "text": "Up to ",
+                "amount": 200
+            }
+        },
+        {
+            "company": "Spin Sports",
+            "logo": "spin-sports.jpg",
+            "rating": 2,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "bodog",
+            "logo": "bodog.png",
+            "rating": 1,
+            "bonustext": {
+                "type": "bonus",
+                "text": "Up to ",
+                "amount": 200
+            }
+        },
+        {
+            "company": "bet365",
+            "logo": "bet365.png",
+            "rating": 5,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "888sport",
+            "logo": "888sport.png",
+            "rating": 5,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "10BET For the bettor.",
+            "logo": "10bet.png",
+            "rating": 5,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "LeoVegas",
+            "logo": "leovegas.png",
+            "rating": 5,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 200
+            }
+        },
+        {
+            "company": "WiliamHill",
+            "logo": "william-hill.jpg",
+            "rating": 5,
+            "bonustext": {
+                "type": "free-bet",
+                "text": "Free Bet Up to",
+                "amount": 500
+            }
         }
-    },
-    {
-        "company": "betway",
-        "logo": "betway.png",
-        "rating": 3,
-        "bonustext": {
-            "type": "bonus",
-            "text": "Up to ",
-            "amount": 200
-        }
-    },
-    {
-        "company": "Spin Sports",
-        "logo": "spin-sports.jpg",
-        "rating": 2,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
-        }
-    },
-    {
-        "company": "bodog",
-        "logo": "bodog.png",
-        "rating": 1,
-        "bonustext": {
-            "type": "bonus",
-            "text": "Up to ",
-            "amount": 200
-        }
-    },
-    {
-        "company": "bet365",
-        "logo": "bet365.png",
-        "rating": 5,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
-        }
-    },
-    {
-        "company": "888sport",
-        "logo": "888sport.png",
-        "rating": 5,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
-        }
-    },
-    {
-        "company": "10BET For the bettor.",
-        "logo": "10bet.png",
-        "rating": 5,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
-        }
-    },
-    {
-        "company": "LeoVegas",
-        "logo": "leovegas.png",
-        "rating": 5,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 200
-        }
-    },
-    {
-        "company": "WiliamHill",
-        "logo": "william-hill.jpg",
-        "rating": 5,
-        "bonustext": {
-            "type": "free-bet",
-            "text": "Free Bet Up to",
-            "amount": 500
-        }
-    }
-]
+    ]
+}

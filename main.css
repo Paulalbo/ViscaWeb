@@ -33,6 +33,18 @@
   }
 }
 
+.render-more {
+  color: #2738F1;
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 22px;
+}
+
+.render-more:hover {
+  cursor: pointer;
+  color: #F44337;
+}
+
 .head-container {
   position: relative;
   padding: 23px 0 46px;
@@ -478,6 +490,15 @@
   }
   .card-container--cards-big .card__rating {
     margin-bottom: 29px;
+  }
+  .card-container--cards-big .card__rating .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
   }
   .card-container--cards-big .card .info {
     margin: 0 0 33px 0;

@@ -1,4 +1,14 @@
-// Render cards
+let AllCardsRenderd = false;
+let container = document.querySelector('.card-container');
+await renderCards();
+let getCards = document.querySelectorAll(".card");
+numberCards();
+
+
+
+// ---------------------- RENDER CARDS ----------------------
+
+
 async function getCardsData() {
     let url = '../assets/card-data.json';
     try {
@@ -9,10 +19,12 @@ async function getCardsData() {
     }
 }
 
-async function renderCards() {
+async function renderCards(renderAll) {
     let card = await getCardsData();
     let cardContainer = '';
-    card.forEach(card => {
+    let limit = card.config.limit;
+    if (renderAll === true) { limit = card.data.length; AllCardsRenderd == true }
+    card.data.slice(0, limit).forEach(card => {
         let bonustext = ''
         if (card.bonustext.type === "free-bet") {
             bonustext = `
@@ -51,9 +63,15 @@ async function renderCards() {
     container.innerHTML = cardContainer;
 }
 
-// Sort Alphabetically 
 
-// Compare names and sort
+
+
+
+
+// ---------------------- SORT CARDS ----------------------
+
+// compare names and sort alphabetically
+
 function comparator(a, b) {
     if (a.dataset.company < b.dataset.company)
         return -1;
@@ -62,6 +80,7 @@ function comparator(a, b) {
     return 0;
 }
   
+
 function sortCards() {
     var subjects = document.querySelectorAll("[data-company]");
     var subjectsArray = Array.from(subjects);
@@ -69,21 +88,25 @@ function sortCards() {
     sorted.forEach(e => document.querySelector(".card-container").appendChild(e));
 }
 
+
+
     
 
-// number cards
+// ---------------------- NUM CARDS ----------------------
+
 function numberCards() {
     let getCardsCount = document.querySelectorAll(".card__count");
     for (let i = 0; i < getCardsCount.length; i++) {
         getCardsCount[i].innerHTML = i + 1;
     }
 }
-let container = document.querySelector('.card-container');
-await renderCards();
-let getCards = document.querySelectorAll(".card");
-numberCards();
 
-// add sort class listener
+
+
+
+
+// ---------------------- EVENT LISTENER ----------------------
+
 let sortTriggerAlphab = document.querySelector("#sortCardsAlphabeticall");
 sortTriggerAlphab.addEventListener("click", function() { 
     sortCards()
@@ -97,19 +120,33 @@ sortTriggerNumeri.addEventListener("click", async function() {
     sortTriggerNumeri.style.display = "none";
     sortTriggerAlphab.style.display = "block";
     container.classList.remove("card-container--sorted");
-    await renderCards();
+    await renderCards(AllCardsRenderd);
     numberCards();
 });
 
 
 
 
-// view toggle
+
+// ---------------------- RENDER ALL BUTTON ----------------------
+
+let renderAll = document.querySelector(".render-more");
+renderAll.addEventListener("click", async function() { 
+    AllCardsRenderd = true;
+    await renderCards(AllCardsRenderd);
+    numberCards();
+    renderAll.style.display = "none";
+});
+
+
+
+
+
+// ---------------------- TOGGLE CARD VIEW ----------------------
 
 function switchCardView() {
     if (getToggle.checked == true) {
         container.classList.add("card-container--cards-big");
-        console.log("toggle toggle ")
     } else {
         container.classList.remove("card-container--cards-big");
     }
