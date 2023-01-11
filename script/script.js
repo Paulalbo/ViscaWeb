@@ -13,14 +13,36 @@ async function renderCards() {
     let card = await getCardsData();
     let cardContainer = '';
     card.forEach(card => {
-        let singleCards = `<div class="card" data-company="${card.company.toLowerCase()}">
+        let bonustext = ''
+        if (card.bonustext.type === "free-bet") {
+            bonustext = `
+                <span class="info-text info-text--full"><b> - Exclusive - </b> ${card.bonustext.text}</span>
+                <span class="info-text info-text--short">Free Bet</span>
+                <span class="info-text info-text--amount">&nbsp;${card.bonustext.amount}$</span>
+            `}
+        if (card.bonustext.type === "bonus") {
+                bonustext = `
+                    <span class="info-text info-text--full"><span>100% Sign Up Bonus </span>${card.bonustext.text} </span>
+                    <span class="info-text info-text--short">Bonus</span>
+                    <span class="info-text info-text--amount">&nbsp;${card.bonustext.amount}$</span>
+                `}
+        let singleCards = `
+                    <div class="card" data-company="${card.company.toLowerCase()}">
                         <p class="card__count"></p>
-                        <img src="${card.logo}" class="card__img" alt="${card.company}">
                         <div class="card__info">
-                            <div class="rating rating--5"></div>
-                            <p>review</p>
+                            <img src="./assets/${card.logo}" class="card__img" alt="${card.company}">
+                            <div class="card__rating">
+                                <div class="rating rating--${card.rating}"></div>
+                                <a class="card__review" href="./review">Review</a>
+                            </div>
+                            <div class="info">
+                                ${bonustext}
+                            </div>
                         </div>
-                        <a href="#" class="card__button"><span class="card__button-text">Play Now</span></a>
+                        <a href="#" class="card__button">
+                            Play&nbsp;Now
+                            <i class="card__button--icon fa-solid fa-chevron-right"></i>
+                        </a>
                     </div>`;
 
         cardContainer += singleCards;
@@ -67,13 +89,14 @@ sortTriggerAlphab.addEventListener("click", function() {
     sortCards()
     sortTriggerAlphab.style.display = "none";
     sortTriggerNumeri.style.display = "block";
-    container.classList.toggle("card-container--sorted");
+    container.classList.add("card-container--sorted");
 });
 
 let sortTriggerNumeri = document.querySelector("#sortCardsNumerical");
 sortTriggerNumeri.addEventListener("click", async function() { 
     sortTriggerNumeri.style.display = "none";
     sortTriggerAlphab.style.display = "block";
+    container.classList.remove("card-container--sorted");
     await renderCards();
     numberCards();
 });

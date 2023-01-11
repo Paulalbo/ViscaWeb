@@ -2,33 +2,119 @@
     box-shadow: 0px 3px 12px 0px #00000033
     border-radius: 8px
     background: $color-white
-    margin: 8px 16px
+    margin: 8px 0
+    padding-left: 17px
     display: flex
     justify-content: space-between
     align-items: center
+    @media screen and (min-width: $device-medium)
+        padding: 0 16px 0 21px
+        min-height: 56px
     &-container 
         &--sorted
-            .card__count
-                opacity: 0
+            .card
+                padding-left: 17px
+                &__count
+                    width: 0
+                    padding: 0
+                    opacity: 0
+                
     &__count 
-
+        font-size: 23px
+        font-weight: 700
+        width: auto
+        padding: 12px 20px 15px 0
+        max-width: 50px
     &__img 
-
+        height: 42px
+        width: 84px
+        object-fit: contain
+        @media screen and (min-width: $device-medium)
+            margin-right: 49px
+    &__review
+        color: $color-greyish-brown
+        margin: 0 auto
+        font-size: 13px
+        @media screen and (min-width: $device-medium)
+            font-size: 14px
+    &__rating 
+        display: flex
+        .rating
+            display: none
+            margin-right: 21px
+            @media screen and (min-width: $device-medium)
+                display: block
+                &::after
+                    content: ""
+                    color: $color-yellow
+            &--1
+                &::after
+                    content: "\2605\2730\2730\2730\2730"
+            &--2
+                &::after
+                    content: "\2605\2605\2730\2730\2730"
+            &--3
+                &::after
+                    content: "\2605\2605\2605\2730\2730"
+            &--4
+                &::after
+                    content: "\2605\2605\2605\2605\2730"
+            &--5
+                &::after
+                    content: "\2605\2605\2605\2605\2605"
     &__info 
-    
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        @media screen and (min-width: $device-medium)
+            justify-content: flex-start
+        .info
+            display: flex
+            flex-direction: column
+            margin-right: 23px
+            @media screen and (min-width: $device-medium)
+                flex-direction: row
+                margin-left: auto
+            &-text
+                color: $color-vivid-blue
+                text-align: center
+                font-size: 10px
+                @media screen and (min-width: $device-medium)
+                    font-size: 17px
+                &--full 
+                    display: none
+                    @media screen and (min-width: $device-medium)
+                        display: block
+                &--short
+                    display: block
+                    font-size: 10px
+                    line-height: 12.5px
+                    text-transform: uppercase
+                    @media screen and (min-width: $device-medium)
+                        display: none
+                &--amount
+                    font-size: 17px
+                    font-weight: 700
     &__button 
         background-color: $color-orangey-red
         color: $color-white
-        min-width: 39px
-        min-height: 56px
+        padding: 28px 19.5px
         position: relative
         border-radius: 0 8px 8px 0
-        &::after
-            content: ">"
+        font-size: 0
+        @media screen and (min-width: $device-medium)
+            border-radius: 4px
+            padding: 9px 44px
+            font-size: 14px
+        &--icon
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
+            font-size: 14px
+            @media screen and (min-width: $device-medium)
+                top: 18px
+                right: 13px
+                left: unset
 
-        &-text 
-            display: none

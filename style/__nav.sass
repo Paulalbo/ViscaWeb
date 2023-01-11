@@ -1,2 +1,19 @@
 .nav
     background-color: $color-black
+    display: flex
+    justify-content: center
+    align-items: center
+    &__logo
+        max-height: 52px
+        width: auto
+        object-fit: contain
+    &__innercontainer 
+        display: none
+        @media screen and (min-width: $device-medium)
+            display: block
+    &__item
+        color: $color-white
+        margin-left: 15px
+        text-decoration: none
+        &:hover
+            color: $color-orangey-red

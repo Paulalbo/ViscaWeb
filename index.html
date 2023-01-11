@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./main.css" rel="stylesheet">
     <script defer src="./script/script.js" type="module"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Canada Sports Betting</title>
 </head>
 <body>
     <nav class="nav">
-        <img class="nav__logo" src="./assets/logo.png">
+        <img class="nav__logo" src="./assets/cbs-logo.png">
         <div class="nav__innercontainer">
-            <a class="nav__item">Sportsbooks</a>
-            <a class="nav__item">Sports odds</a>
-            <a class="nav__item">Free picks</a>
-            <a class="nav__item">Power rankings</a>
-            <a class="nav__item">Betting Guide</a>
-            <a class="nav__item">News</a>
+            <a href="./sportsbooks" class="nav__item">Sportsbooks</a>
+            <a href="./sport-odds" class="nav__item">Sports odds</a>
+            <a href="./free-picks" class="nav__item">Free picks</a>
+            <a href="./power-ranking" class="nav__item">Power rankings</a>
+            <a href="./betting-guide" class="nav__item">Betting Guide</a>
+            <a href="./news" class="nav__item">News</a>
         </div>
     </nav>
     <main class="content">
-        <div class="">
-            <a id="sortCardsAlphabeticall" href="#">Sort Alphabetically</a>
-            <a id="sortCardsNumerical" style="display: none" href="#">Sort by Popularity</a>
-            <h1>Best sports betting sites</h1>
-            <label class="toggle">
+        <div class="head-container">
+            <a class="head-container__button" id="sortCardsAlphabeticall" href="#">Sort Alphabetically</a>
+            <a class="head-container__button" id="sortCardsNumerical" style="display: none" href="#">Sort by Popularity</a>
+            <div class="headline-container">
+                <img src="./assets/canada-flag.png" class="headline__logo">
+                <h1 class="headline headline--1">Best sports betting sites</h1>
+            </div>
+            <label class="toggle hide--mobile">
                 <p>change view</p>
                 <input type="checkbox">
                 <span class="toggle__slide"></span>
