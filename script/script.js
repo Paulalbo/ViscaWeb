@@ -16,15 +16,15 @@ async function renderCards() {
         let bonustext = ''
         if (card.bonustext.type === "free-bet") {
             bonustext = `
-                <span class="info-text info-text--full"><b> - Exclusive - </b> ${card.bonustext.text}</span>
-                <span class="info-text info-text--short">Free Bet</span>
-                <span class="info-text info-text--amount">&nbsp;${card.bonustext.amount}$</span>
+                <p class="info-text info-text--full"><b> - Exclusive - </b></p>
+                <p class="info-text info-text--short">Free Bet</p>
+                <p class="info-text info-text--amount"><span class="hide--mobile">${card.bonustext.text}</span>&nbsp;<b>${card.bonustext.amount}$</b></p>
             `}
         if (card.bonustext.type === "bonus") {
                 bonustext = `
-                    <span class="info-text info-text--full"><span>100% Sign Up Bonus </span>${card.bonustext.text} </span>
-                    <span class="info-text info-text--short">Bonus</span>
-                    <span class="info-text info-text--amount">&nbsp;${card.bonustext.amount}$</span>
+                    <p class="info-text info-text--full">100% Sign Up Bonus</p>
+                    <p class="info-text info-text--short">Bonus</p>
+                    <p class="info-text info-text--amount"><span class="hide--mobile">&nbsp;${card.bonustext.text}</span>&nbsp;<b>${card.bonustext.amount}$</b></p>
                 `}
         let singleCards = `
                     <div class="card" data-company="${card.company.toLowerCase()}">
@@ -99,4 +99,23 @@ sortTriggerNumeri.addEventListener("click", async function() {
     container.classList.remove("card-container--sorted");
     await renderCards();
     numberCards();
+});
+
+
+
+
+// view toggle
+
+function switchCardView() {
+    if (getToggle.checked == true) {
+        container.classList.add("card-container--cards-big");
+        console.log("toggle toggle ")
+    } else {
+        container.classList.remove("card-container--cards-big");
+    }
+}
+
+let getToggle = document.querySelector(".switch__checkbox");
+getToggle.addEventListener("click", function() { 
+    switchCardView();
 });
