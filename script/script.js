@@ -5,6 +5,15 @@ let getCards = document.querySelectorAll(".card");
 numberCards();
 
 
+// ---------------------- MOBILE MENU ----------------------
+
+let navMenu = document.querySelector(".nav__menu");
+let nav = document.querySelector(".nav");
+
+navMenu.addEventListener("click",  function() { 
+    nav.classList.toggle("nav--open");
+});
+
 
 // ---------------------- RENDER CARDS ----------------------
 

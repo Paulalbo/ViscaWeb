@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 900px) {
   .content {
-    margin-top: 63px;
+    margin: 63px 0;
   }
 }
 
@@ -73,6 +73,7 @@
 @media screen and (min-width: 900px) {
   .head-container__button {
     position: relative;
+    bottom: unset;
   }
 }
 
@@ -190,9 +191,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -200,6 +201,56 @@
   position: fixed;
   top: 0;
   z-index: 999;
+}
+
+@media screen and (min-width: 900px) {
+  .nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.nav__menu {
+  width: 52px;
+  height: 52px;
+  background-color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav__menu .fa-solid {
+  color: #fff;
+  font-size: 35px;
+}
+
+.nav__menu .fa-bars {
+  display: block;
+}
+
+.nav__menu .fa-xmark {
+  display: none;
+}
+
+.nav--open .fa-bars {
+  display: none;
+}
+
+.nav--open .fa-xmark {
+  display: block;
+}
+
+.nav--open .nav__innercontainer {
+  opacity: 1;
+  z-index: -1;
+  width: 100%;
 }
 
 .nav__logo {
@@ -210,19 +261,51 @@
 }
 
 .nav__innercontainer {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 53px;
+  position: absolute;
+  background-color: #000;
+  padding: 5px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -99;
+  opacity: 0;
+  height: 100vh;
+  width: 0;
 }
 
 @media screen and (min-width: 900px) {
   .nav__innercontainer {
+    all: unset;
+    position: relative;
+    top: 0;
     display: block;
   }
 }
 
 .nav__item {
   color: #fff;
-  margin-left: 15px;
   text-decoration: none;
+  border-bottom: 1px solid #F44337;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.nav__item:last-child {
+  border: none;
+}
+
+@media screen and (min-width: 900px) {
+  .nav__item {
+    margin-left: 15px;
+    border: unset;
+  }
 }
 
 .nav__item:hover {
@@ -461,6 +544,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
