@@ -19,7 +19,7 @@ navMenu.addEventListener("click",  function() {
 
 
 async function getCardsData() {
-    let url = '../assets/card-data.json';
+    let url = './assets/card-data.json';
     try {
         let res = await fetch(url);
         return await res.json();

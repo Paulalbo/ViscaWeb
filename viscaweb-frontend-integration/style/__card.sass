@@ -7,9 +7,13 @@
     display: flex
     justify-content: space-between
     align-items: center
+    transition: .5s
     @media screen and (min-width: $device-medium)
         padding: 0 16px 0 21px
         min-height: 56px
+        &:hover 
+            transform: scale(110%)
+            cursor: pointer
     &__count 
         font-size: 23px
         font-weight: 700
