@@ -21,7 +21,6 @@ function cd_meta_box_cb( $post ) {
 global $post;
 $values = get_post_meta( $post->ID , 'my_meta_box_select', true);
 $selected;
-echo `<h1>You choose the Sportbook: $values</h1>`;
 ?>
     <p>
         <label for="my_meta_box_select">Sportsbook</label>
@@ -52,5 +51,12 @@ function cd_meta_box_save( $post_id )
         update_post_meta( $post_id, 'my_meta_box_select', $_POST['my_meta_box_select'] );
 }
 
+add_filter( 'the_content', function( ) {
+    $values = get_post_meta( get_the_ID() , 'my_meta_box_select', true);
+    if ( $values == "default")
+        return '';
+    else
+        return '<h3>You choose the Sportbook: "'  .$values . '"<h3>';
+  }, 0);
 
 ?>
