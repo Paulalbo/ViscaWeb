@@ -7,6 +7,7 @@
             "company": "Sports interaction",
             "logo": "sports-interaction.jpg",
             "rating": 5,
+            "url": "https://www.sports-interation.test",
             "bonustext": {
                 "type": "bonus",
                 "text": "Up to ",
@@ -17,6 +18,7 @@
             "company": "Power Play Sports",
             "logo": "powerplay.png",
             "rating": 4,
+            "url": "https://www.power-play.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -27,6 +29,7 @@
             "company": "betway",
             "logo": "betway.png",
             "rating": 3,
+            "url": "https://www.betway.test",
             "bonustext": {
                 "type": "bonus",
                 "text": "Up to ",
@@ -37,6 +40,7 @@
             "company": "Spin Sports",
             "logo": "spin-sports.jpg",
             "rating": 2,
+            "url": "https://www.spin-sports.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -47,6 +51,7 @@
             "company": "bodog",
             "logo": "bodog.png",
             "rating": 1,
+            "url": "https://www.bodog.test",
             "bonustext": {
                 "type": "bonus",
                 "text": "Up to ",
@@ -57,6 +62,7 @@
             "company": "bet365",
             "logo": "bet365.png",
             "rating": 5,
+            "url": "https://www.bet365.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -67,6 +73,7 @@
             "company": "888sport",
             "logo": "888sport.png",
             "rating": 5,
+            "url": "https://www.888sport.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -77,6 +84,7 @@
             "company": "10BET For the bettor.",
             "logo": "10bet.png",
             "rating": 5,
+            "url": "https://www.10bet.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -87,6 +95,7 @@
             "company": "LeoVegas",
             "logo": "leovegas.png",
             "rating": 5,
+            "url": "https://www.leovegas.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",
@@ -97,6 +106,7 @@
             "company": "WiliamHill",
             "logo": "william-hill.jpg",
             "rating": 5,
+            "url": "https://www.wiliamhill.test",
             "bonustext": {
                 "type": "free-bet",
                 "text": "Free Bet Up to",

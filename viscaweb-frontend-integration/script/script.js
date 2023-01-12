@@ -35,6 +35,7 @@ async function renderCards(renderAll) {
     if (renderAll === true) { limit = card.data.length; AllCardsRenderd == true }
     card.data.slice(0, limit).forEach(card => {
         let bonustext = ''
+        let cardId = card.company.split(' ').join('-').toLowerCase()
         if (card.bonustext.type === "free-bet") {
             bonustext = `
                 <p class="info-text info-text--full"><b> - Exclusive - </b></p>
@@ -49,18 +50,19 @@ async function renderCards(renderAll) {
                 `}
         let singleCards = `
                     <div class="card" data-company="${card.company.toLowerCase()}">
+                        <a class="card__link" href="${card.url}"></a>
                         <p class="card__count"></p>
                         <div class="card__info">
-                            <img src="./assets/${card.logo}" class="card__img" alt="${card.company}">
+                            <a class="card__link--front" href="./${cardId}/review""><img src="./assets/${card.logo}" id="${cardId}" class="card__img" alt="${card.company}"></a>
                             <div class="card__rating">
                                 <div class="rating rating--${card.rating}"></div>
-                                <a class="card__review" href="./review">Review</a>
+                                <a class="card__review card__link--front" href="./${cardId}/review">Review</a>
                             </div>
                             <div class="info">
                                 ${bonustext}
                             </div>
                         </div>
-                        <a href="#" class="card__button">
+                        <a href="./${cardId}" class="card__button card__link--front">
                             Play&nbsp;Now
                             <i class="card__button--icon fa-solid fa-chevron-right"></i>
                         </a>
